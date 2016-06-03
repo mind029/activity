@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <title>问答栏目</title>
+    <link rel="stylesheet" href="./static/css/base.css"/>
+    <link rel="stylesheet" href="./static/css/activity.css"/>
+</head>
+<body>
+<div id="app">
+    <div class="wrap-page wrap-no-header wrap-no-footer activity-bg">
+        <div class="page">
+            <div class="activity-banner">
+                <img src="./images/banner.png">
+            </div>
+            <div class="question-box a-oh">
+                <div class="question-item">
+                    <div class="question-item-title">
+                        <div class="question-item-title-icon"></div>
+                        <div class="question-item-score">分数：10分</div>
+                    </div>
+                    <div class="question-item-body">
+                       <div style="padding:15px 15px 0 15px;overflow: hidden;">1.在市场经济下，物业管理的属性是经营，所提供商品是（）</div>
+                       <div style="padding:15px;overflow: hidden;">
+                           <div class="question-item-select">
+                               A：管理
+                           </div>
+                           <div  class="question-item-select">
+                               B：劳务
+                           </div>
+                           <div  class="question-item-select">
+                               C：管理
+                           </div>
+                           <div  class="question-item-select">
+                               D：劳务
+                           </div>
+                       </div>
+                    </div>
+                    <div class="question-item-footer">
+                        <div class="activity-btn">下一题</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-box   mt25" style="height: 300px;">
+                <div class="question-desc-icon">
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                    <div class="question-desc-icon-split"></div>
+                    <div class="question-desc-icon-item"></div>
+                </div>
+                <div class="question-desc">
+                    <div class="question-desc-content">
+                        <div class="question-desc-label">
+                            活动规则：
+                        </div>
+                        <div class="question-desc-txt">
+                            <p>1、积分有有效期</p>
+                            <p>2、上半年获得的积分，有效期至当年九月底，过期作废。下半年获得的积分，有效期至次年三月底，过期作废</p>
+                            <p>3、积分是指成功购物即可累计金额获得的积分。消费1元积1分。</p>
+                            <p>4、成功购物是指：活动期间内在易趣网创建并完成交易——即买家已确认收货、安付通交易状态为“交易成功”的交易。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--不中奖-->
+<div class="a-result-box" style="display: none;">
+    <div class="a-result-top">
+        很遗憾，再来一次
+    </div>
+    <div class="a-result-tips2">
+        <p style="font-size: 15px;">谢谢您的参与！</p>
+        <p style="font-size: 13px;margin-top: 8px;">本次答题您获得50分。</p>
+    </div>
+    <div class="a-result-btn mt15">重新答题</div>
+</div>
+<!--不中奖-->
+
+<!--中奖-->
+<div class="a-result-box">
+    <div class="a-result-top" style="margin-top: 31px;">
+        <p><span style="font-size: 14px;margin-right: 3px;">&yen;</span><span style="font-size: 40px;">50</span></p>
+    </div>
+    <div class="a-result-tips2" style="margin-top: 51px;">
+        <p style="font-size: 15px;">哇！恭喜您闯关成功！</p>
+        <p style="font-size: 13px;margin-top: 8px;">本次答题您获得100分哦。</p>
+    </div>
+    <div class="a-result-btn mt15">点击领取红包</div>
+</div>
+<!--中奖-->
+
+
+<!--领取后-->
+<div class="a-result-box">
+    <div class="a-result-top" style="margin-top: 31px;">
+        <p><span style="font-size: 14px;margin-right: 3px;">&yen;</span><span style="font-size: 40px;">50</span></p>
+    </div>
+    <div class="a-result-tips2" style="margin-top: 51px;">
+        <p style="font-size: 15px;">恭喜您在答题活动中获得</p>
+        <p style="font-size: 13px;margin-top: 8px;">${userExtend.winMoney}元平安红包</p>
+        <p style="font-size: 13px;margin-top: 8px;">每人仅限参加一次活动，您</p>
+        <p style="font-size: 13px;margin-top: 8px;">已领取过红包</p>
+    </div>
+</div>
+<!--领取后-->
+
+<div class="a-modal"></div>
+
+<script>
+    /*页面自适应*/
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    /*页面自适应*/
+</script>
+</body>
+</html>

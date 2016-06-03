@@ -1,0 +1,141 @@
+.activity-bg {
+    background: #ffb001;
+}
+.activity-banner  {
+    height: 167px;
+    background: green;
+}
+.activity-banner img {
+    height: 167px;
+    width: 100%;
+}
+
+.question-box {
+    height: auto;
+    background: #fefcfd;
+    position: relative;
+    margin: 5px;
+}
+.a-oh {  overflow: hidden;}
+.question-item {
+    min-height: 166px;
+    margin: 13px;
+    border: 1px solid #fed67e;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.question-item-body {overflow: hidden;}
+.question-item-title {
+    height: 33px;
+    line-height: 33px;
+    font-size: 12px;
+    background: #fed67e;
+    overflow: hidden;
+}
+
+.question-item-title-icon {
+    width: 59px;
+    height: 18px;
+    margin-left:8px;
+    margin-top: 7px;
+    background: green;
+    float: left;
+    overflow: hidden;
+}
+.question-item-score {
+    float: right;
+    margin-right: 15px;
+}
+
+.question-item-select {
+    width: 50%;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+}
+
+.question-item-footer {
+    margin: 10px 0;
+    overflow: hidden;
+}
+.activity-btn {
+    width: 160px;
+    height: 35px;
+    line-height: 35px;
+    background: #fe6a03;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+}
+.mt25{margin-top: 25px;}
+.a-fl{float: left;}
+.a-fr{float: right;}
+.question-desc {
+    height: 150px;
+}
+
+.question-desc-icon {
+    position: relative;
+    top: -10px;
+    display: flex;
+}
+.question-desc-icon-item {
+    flex: 1;
+    height: 30px;
+    border-radius: 600px;
+    background: #fff;
+}
+
+.question-desc-icon-split {
+    flex: 1;
+}
+
+.question-desc-content {padding:0 20px;overflow: hidden;}
+.question-desc-label {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    background: #fe6a03;
+    text-align: center;
+    color: #ffffff;
+}
+.question-desc-txt {margin-top: 15px;}
+
+
+.a-result-box {
+    width: 270px;
+    height: 350px;
+    background: url("../img/zj.png") no-repeat;
+    background-size: contain;
+    z-index: 50;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left:-135px;;
+}
+
+.a-result-top {
+    margin-top: 51px;
+    text-align: center;
+    color: #df2e1c;
+    font-size: 13px;
+}
+
+.a-result-tips2 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 71px;
+    font-size: 13px;
+}
+.mt15{margin-top: 15px !important;}
+.a-result-btn {
+    width: 123px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    color: #fe6a03;
+    background: #fff85c;
+    border-radius: 3px;
+}
